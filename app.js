@@ -5,9 +5,10 @@ const Intern = require("./lib/Intern.js");
 const main = require("./lib/main.js");
 const fs = require("fs");
 
-
+//adding the header and footer values to a variable to be included in final HTML print
 const team = [main.header(), main.footer()];
 
+//initialize function to prompt manager's questions using Inquirer
 function initalize(){
   return inquirer.prompt([
     {
@@ -33,6 +34,7 @@ function initalize(){
     }
   ])
 }
+//building a team after the selection of manager - Engineer then intern
 function buildTeam(){
   inquirer.prompt([
     {
@@ -41,6 +43,7 @@ function buildTeam(){
       message:"What type of team member would you like to add?",
       choices: ["Engineer","Intern","I don't want to add any more team members"]
     }
+    //if the Engineer is selected out of answer role, then prompt the following questions
   ]).then((answer)=> {
     if (answer.role === "Engineer"){
       return inquirer.prompt([
@@ -64,12 +67,15 @@ function buildTeam(){
           name: "github",
           message: `What is your engineer's GitHub??`
         }
+//setting up a variable to store the eneineer's new information and then build the team value
       ]).then((answers)=>{
         let engineer = new Engineer(answers.name, answers.id, answers.email,answers.github);
         team.splice(team.length-1,0,engineer.getHTML());
         buildTeam();
       })
     }
+
+//if the answer role is intern, then prompt the following questions
     if (answer.role === "Intern"){
       return inquirer.prompt([
         {
@@ -92,6 +98,7 @@ function buildTeam(){
           name: "school",
           message: `What is your intern's school?`
         }
+//store the answers in the intern variable to build team 
       ]).then((answers)=>{
         let intern = new Intern(answers.name, answers.id, answers.email,answers.school);
         team.splice(team.length-1,0,intern.getHTML());
@@ -99,23 +106,26 @@ function buildTeam(){
       })
     }
 
-    return printHTML(team);
+    //after the build team has been selected, then print the team variable to html
+  return printHTML(team);
+  
   });
 }
+//write to file the team value into HTML
 function printHTML(team){
   fs.writeFile("team.html",team, (err) => {
     if(err) {
       throw err;
     };
-    console.log("Your team has been constructed!");
   });
   open("team.html");
   };
 
-/* ==========================================================*/
-//START OF APP SEQUENCE 
-/* ==========================================================*/
+
+//START OF APP after all the above steps has been completed  
 initalize()
+
+//Start the prompt with the manager first then build team
 .then((answers)=>{
   const manager = new Manager(answers.name, answers.id, answers.email,answers.officeNumber);
   team.splice(team.length-1,0,manager.getHTML());
