@@ -4,6 +4,7 @@ const Engineer = require("./lib/Engineer.js");
 const Intern = require("./lib/Intern.js");
 const main = require("./lib/main.js");
 const fs = require("fs");
+const open = require("open");
 
 //adding the header and footer values to a variable to be included in final HTML print
 const team = [main.header(), main.footer()];
