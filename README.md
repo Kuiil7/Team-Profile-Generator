@@ -1,5 +1,3 @@
-# Team Profile Generator
-
 The Team Profile Generator command line appication, can be used to build software engineering teams. When prompted, manager information is asked for input such as office number, email, github username and school. There is no limit in the addition any number of team members that includes engineers and interns. Once user information has been submitted, the application will create a HTML team roster. 
 
 # Instructions
