@@ -8,6 +8,7 @@ User will be prompted to submit user information for roles of your choice starti
 Jest unit testing package is included and used to pass all tests and can be done by "npm run test".
 
 Software Demo:
+
 ![Team Profile Generator](./Assets/TPG.gif)
 
 # Created using: 
