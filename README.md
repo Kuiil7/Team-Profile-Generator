@@ -12,7 +12,7 @@ User will be prompted to submit user information of your choice starting with a 
 
 ### start app
 
-                    node app.js
+             node app.js
 
 ### Testing
 
