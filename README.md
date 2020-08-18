@@ -14,9 +14,8 @@ User will be prompted to submit user information of your choice starting with a 
 
     node app.js
 
-### Testing
+### Testing: Jest unit testing package is included and used to pass all tests and can be done by
 
-Jest unit testing package is included and used to pass all tests and can be done by:
     npm run test
 
 ### Built with
