@@ -18,8 +18,8 @@ Jest unit testing package is included and used to pass all tests and can be done
 
 ## Built with
 
-HTML 
-JavaScript 
-Jest 
-Inquirer 
+HTML
+JavaScript
+Jest
+Inquirer
 Node.js
