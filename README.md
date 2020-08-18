@@ -1,10 +1,10 @@
 # Team Profile Generator
 
-![Team Profile Generator](./assets/tpg1.png)
+![APP SCREENSHOT](./assets/tpg1.png)
 
 ## App Demo
 
-![Team Profile Generator](./assets/TPG.gif)
+![APP DEMO](./assets/TPG.gif)
 
 ## Instructions
 
