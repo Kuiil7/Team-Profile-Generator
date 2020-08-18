@@ -18,7 +18,7 @@ in terminal, run:
 ### Testing
 
 Jest unit testing package is included and used to pass all tests and can be done by:
-         npm run test
+    npm run test
 
 ### Built with
 
