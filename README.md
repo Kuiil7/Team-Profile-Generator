@@ -1,6 +1,6 @@
 # Team Profile Generator
 
-![APP SCREENSHOT](./Assets/tpg2.png)
+![APP SCREENSHOT](./Assets/tpg.png)
 
 ## APP DEMO
 
@@ -22,8 +22,9 @@ Jest, a unit testing package is included and used to pass all tests and can be d
 
 ### BUILT WITH
 
-HTML
-JavaScript
-Jest
-Inquirer
-Node.js
+* HTML
+* CSS
+* JavaScript
+* Jest
+* Inquirer
+* Node.js
